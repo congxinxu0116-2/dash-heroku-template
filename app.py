@@ -7,6 +7,7 @@ import plotly.graph_objects as go
 import plotly.figure_factory as ff
 import dash
 # from jupyter_dash import JupyterDash
+import dash_bootstrap_components as dbc
 import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
@@ -124,7 +125,7 @@ fig6.update_layout(showlegend=False)
 bar_columns = ['satjob', 'relationship', 'male_breadwinner', 'men_bettersuited', 'child_suffer', 'men_overwork'] 
 group_columns = ['sex', 'region', 'education'] 
 
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.CYBORG])
 server = app.server
 # app = JupyterDash(__name__, external_stylesheets=external_stylesheets)
 
